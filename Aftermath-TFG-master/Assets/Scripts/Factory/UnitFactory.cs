@@ -131,7 +131,9 @@ public static class UnitFactory
 
 	static void AddAttackPattern (GameObject obj, string name)
 	{
-		Driver driver = obj.AddComponent<Driver>();
+        Driver driver;
+        if (obj.GetComponent<Driver>() == null) driver = obj.AddComponent<Driver>();
+        else driver = obj.GetComponent<Driver>();
 		if (string.IsNullOrEmpty(name))
 		{
 			driver.normal = Drivers.Human;

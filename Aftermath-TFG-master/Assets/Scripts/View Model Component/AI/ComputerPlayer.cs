@@ -31,6 +31,7 @@ public class ComputerPlayer : MonoBehaviour
             if (state == "Default") bc.GetComponentInChildren<BattleMessageController>().Display(actor.name + " feels normal");
             else if (state == "Shaken") bc.GetComponentInChildren<BattleMessageController>().Display(actor.name + " feels shaken");
             else if (state == "Emboldened") bc.GetComponentInChildren<BattleMessageController>().Display(actor.name + " feels emboldened");
+            actor.transform.Find(state + " " + actor.GetComponentInChildren<Job>().name + " Attack Pattern").GetComponent<AttackPattern>().index = 0;
         }
         AttackPattern pattern = actor.transform.Find(state + " " + actor.GetComponentInChildren<Job>().name + " Attack Pattern").GetComponent<AttackPattern>();
 		if (pattern)
@@ -246,7 +247,7 @@ public class ComputerPlayer : MonoBehaviour
 		
 		AttackOption choice = finalPicks[ UnityEngine.Random.Range(0, finalPicks.Count)  ];
 		poa.fireLocation = choice.target.pos;
-        Debug.Log(choice.target.content.name);
+        Debug.Log(choice.target.pos);
         poa.unit = choice.target.content;
 		poa.attackDirection = choice.direction;
 		poa.moveLocation = choice.bestMoveTile.pos;
