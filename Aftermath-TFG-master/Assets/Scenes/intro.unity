@@ -571,7 +571,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1198674059}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1198674073}
   variables: []
   description: 
   stepPause: 0
@@ -711,9 +712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: 'But Captain, if we try to plow through their forces before our army
-    can arrive to the site, we''ll be crushed for sure! We must cross through a less
-    defended point '
+  storyText: But Captain, if we try to plow through their forces before our army can
+    arrive to the site, we'll be crushed for sure! We must cross
   description: 
   character: {fileID: 298357244}
   portrait: {fileID: 21300000, guid: 7e2a69b3c30514bb7b27323833be5df7, type: 3}
@@ -933,7 +933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: and try to alert the King before it's to late!
+  storyText: through a less defended post and try to alert the King before it's to
+    late!
   description: 
   character: {fileID: 298357244}
   portrait: {fileID: 21300000, guid: 7e2a69b3c30514bb7b27323833be5df7, type: 3}

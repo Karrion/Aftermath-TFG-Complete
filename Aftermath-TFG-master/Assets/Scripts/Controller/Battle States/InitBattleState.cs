@@ -548,10 +548,6 @@ public class InitBattleState : BattleState
 
     void AddVictoryCondition ()
 	{
-		DefeatTargetVictoryCondition vc = owner.gameObject.AddComponent<DefeatTargetVictoryCondition>();
-		Unit enemy = units[ units.Count - 1 ];
-		vc.target = enemy;
-		Health health = enemy.GetComponent<Health>();
-		health.MinHP = 10;
+		DefeatAllEnemiesVictoryCondition vc = owner.gameObject.AddComponent<DefeatAllEnemiesVictoryCondition>();
 	}
 }
